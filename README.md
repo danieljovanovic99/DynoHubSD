@@ -3,7 +3,7 @@
 ![DynoHub Logo](https://i.imgur.com/MOfc0t5.png)
 
 ## Overview
-The **DynoHub Library** (**DHSD**) is designed for SD card operations using **SD_MMC** on **ESP32**, specifically for the **DynoHub Dev Board** and **OLIMEX POE ISO**. This library provides functions to read, write, list, delete, and append to files on SD cards, making data logging and file management easy.
+The **DynoHub SD Card Library** (**DHSD**) is designed for SD card operations using **SD_MMC** on **ESP32**, specifically for the **DynoHub Dev Board** and **OLIMEX POE ISO**. This library provides functions to read, write, list, delete, and append to files on SD cards, making data logging and file management easy.
 
 ## Features
 - **Designed for ESP32-based DynoHub and OLIMEX POE ISO boards**
@@ -13,12 +13,11 @@ The **DynoHub Library** (**DHSD**) is designed for SD card operations using **SD
 - **CSV logging support**
 - **Automatic SD card reconnection**
 - **Print SD card information**
-- **Displays a startup logo**
 
 ## Installation
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/DHSD-library.git
+   git clone [https://github.com/danieljovanovic99/DynoHubSD.git]
    ```
 2. Include the library in your project:
    ```cpp
