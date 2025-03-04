@@ -1,4 +1,4 @@
-# DynoHub Library
+# DynoHub SD Card Library
 
 ![DynoHub Logo](https://i.imgur.com/MOfc0t5.png)
 
