@@ -17,7 +17,7 @@ The **DynoHub SD Card Library** (**DHSD**) is designed for SD card operations us
 ## Installation
 1. Clone this repository:
    ```sh
-   git clone [https://github.com/danieljovanovic99/DynoHubSD.git]
+   git clone https://github.com/danieljovanovic99/DynoHubSD.git
    ```
 2. Include the library in your project:
    ```cpp
