@@ -1,6 +1,6 @@
 # DynoHub Library
 
-![DynoHub Logo](https://your-logo-url.com/logo.png)
+![DynoHub Logo](https://i.imgur.com/MOfc0t5.png)
 
 ## Overview
 The **DynoHub Library** (**DHSD**) is designed for SD card operations using **SD_MMC** on **ESP32**, specifically for the **DynoHub Dev Board** and **OLIMEX POE ISO**. This library provides functions to read, write, list, delete, and append to files on SD cards, making data logging and file management easy.
@@ -116,13 +116,11 @@ SDCARD.printLogo();
 | `isSDCardMounted()` | Checks if an SD card is available. |
 | `attemptReconnect()` | Tries to reconnect the SD card if removed. |
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributions
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## Author
 **Daniel Jovanovic**  
-[GitHub](https://github.com/yourusername)  
+[GitHub](https://github.com/danieljovanovic99)  
 [Email](mailto:daniel.jovanovic@outlook.com)
