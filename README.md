@@ -1,13 +1,11 @@
-# DynoHub SD Card Library
-
-![DynoHub Logo](https://i.imgur.com/MOfc0t5.png)
+# EasySDMMC Library
 
 ## Overview
-The **DynoHub SD Card Library** (**DHSD**) is designed for SD card operations using **SD_MMC** on **ESP32**, specifically for the **DynoHub Dev Board** and **OLIMEX POE ISO**. This library provides functions to read, write, list, delete, and append to files on SD cards, making data logging and file management easy.
+The **EasySDMMC Library** is designed for SD card operations using **SD MMC** on **ESP32**, specifically for the **DynoHub Dev Board** and **OLIMEX POE ISO**. This library provides functions to read, write, list, delete, and append to files on SD cards, making data logging and file management easy.
 
 ## Features
 - **Designed for ESP32-based DynoHub and OLIMEX POE ISO boards**
-- **Uses SD_MMC interface for high-speed SD card access**
+- **Uses SD MMC interface for high-speed SD card access**
 - **File operations: create, read, write, append, delete, rename**
 - **Directory management**
 - **CSV logging support**
@@ -21,15 +19,15 @@ The **DynoHub SD Card Library** (**DHSD**) is designed for SD card operations us
    ```
 2. Include the library in your project:
    ```cpp
-   #include "DHSD.h"
+   #include "EasySDMMC.h"
    ```
-3. Ensure your ESP32 project is configured to use **SD_MMC**.
+3. Ensure your ESP32 project is configured to use **SD MMC**.
 
 ## Usage
 
 ### Initialize SD Card
 ```cpp
-#include "DHSD.h"
+#include "EasySDMMC.h"
 
 void setup() {
     Serial.begin(115200);
