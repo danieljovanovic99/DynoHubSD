@@ -13,6 +13,7 @@ The **EasySDMMC Library** is designed for SD card operations using **SD MMC** on
 - **Print SD card information**
 
 ## Installation
+## 1. With Git
 1. Clone this repository:
    ```sh
    git clone https://github.com/jvnvic/EasySDMMC.git
@@ -22,6 +23,21 @@ The **EasySDMMC Library** is designed for SD card operations using **SD MMC** on
    #include "EasySDMMC.h"
    ```
 3. Ensure your ESP32 project is configured to use **SD MMC**.
+
+## 2. With .zip
+1. Download the latest library release
+
+2. In **Arduino IDE** choose 
+   ```sh
+   Sketch > Include Library > Add .ZIP Library
+   ```
+   
+3. Include the library in your project:
+   ```cpp
+   #include "EasySDMMC.h"
+   ```
+
+4. Ensure your ESP32 project is configured to use **SD MMC**.
 
 ## Usage
 
