@@ -1,4 +1,4 @@
-#include <DHSD.h>
+#include <EasySDMMC.h>
 
 #define BUTTON_PIN 34
 #define ADC_SENSOR_1 32
