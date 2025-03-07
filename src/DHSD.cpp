@@ -1,12 +1,12 @@
-#include "DHSD.h"
+#include "EasySDMMC.h"
 
-DHSD::DHSD() {}
+EasySDMMC::EasySDMMC() {}
 
-bool DHSD::begin() {
+bool EasySDMMC::begin() {
     return SD_MMC.begin("/sdcard", true);
 }
 
-bool DHSD::isSDCardMounted() {
+bool EasySDMMC::isSDCardMounted() {
     if (SD_MMC.cardType() == CARD_NONE) {
         return false; // No SD card detected
     }
@@ -22,7 +22,7 @@ bool DHSD::isSDCardMounted() {
     return true;
 }
 
-void DHSD::attemptReconnect() {
+void EasySDMMC::attemptReconnect() {
     Serial.println("Attempting to reconnect to SD card...");
     SD_MMC.end();
     delay(500);
@@ -34,7 +34,7 @@ void DHSD::attemptReconnect() {
     }
 }
 
-void DHSD::printSDCardInfo() {
+void EasySDMMC::printSDCardInfo() {
     uint8_t cardType = SD_MMC.cardType();
     if (cardType == CARD_NONE) {
         Serial.println("No SD_MMC card attached");
@@ -50,7 +50,7 @@ void DHSD::printSDCardInfo() {
     Serial.printf("SD_MMC Card Size: %lluMB\n", cardSize);
 }
 
-void DHSD::listFiles(const char* folderName, uint8_t levels) {
+void EasySDMMC::listFiles(const char* folderName, uint8_t levels) {
     if (!isSDCardMounted()) {
         attemptReconnect();
         if (!isSDCardMounted()) {
@@ -79,7 +79,7 @@ void DHSD::listFiles(const char* folderName, uint8_t levels) {
     }
 }
 
-void DHSD::writeFile(const char* fileName, const char* textValue) {
+void EasySDMMC::writeFile(const char* fileName, const char* textValue) {
     if (!isSDCardMounted()) {
         attemptReconnect();
         if (!isSDCardMounted()) {
@@ -96,7 +96,7 @@ void DHSD::writeFile(const char* fileName, const char* textValue) {
     file.close();
 }
 
-void DHSD::logToCSV(const char* fileName, const char* data) {
+void EasySDMMC::logToCSV(const char* fileName, const char* data) {
     if (!isSDCardMounted()) {
         attemptReconnect();
         if (!isSDCardMounted()) {
@@ -117,7 +117,7 @@ void DHSD::logToCSV(const char* fileName, const char* data) {
     file.close();
 }
 
-String DHSD::generateLogFilename() {
+String EasySDMMC::generateLogFilename() {
     int highestNumber = 0;
     if (!isSDCardMounted()) return "";
     File root = SD_MMC.open("/Logs");
@@ -145,7 +145,7 @@ String DHSD::generateLogFilename() {
     return String(filename);
 }
 
-void DHSD::startLog() {
+void EasySDMMC::startLog() {
     if (!isSDCardMounted()) {
         attemptReconnect();
         if (!isSDCardMounted()) {
@@ -165,12 +165,12 @@ void DHSD::startLog() {
     writeFile(logFilePath.c_str(), "Timestamp (ms), Sensor1, Sensor2, Sensor3\n");
 }
 
-void DHSD::stopLog() {
+void EasySDMMC::stopLog() {
     loggingActive = false;
     Serial.println("\nLogging stopped.");
 }
 
-void DHSD::printLogo() {
+void EasySDMMC::printLogo() {
   Serial.println("██████╗ ██╗   ██╗███╗   ██╗ ██████╗ ██╗  ██╗██╗   ██╗██████╗ ");
   Serial.println("██╔══██╗╚██╗ ██╔╝████╗  ██║██╔═══██╗██║  ██║██║   ██║██╔══██╗");
   Serial.println("██║  ██║ ╚████╔╝ ██╔██╗ ██║██║   ██║███████║██║   ██║██████╔╝");
@@ -180,4 +180,4 @@ void DHSD::printLogo() {
   Serial.println(" ");
 }
 
-DHSD SDCARD;
+EasySDMMC SDCARD;
