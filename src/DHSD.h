@@ -1,13 +1,13 @@
-#ifndef DHSD_H
-#define DHSD_H
+#ifndef EasySDMMC_H
+#define EasySDMMC_H
 
 #include <Arduino.h>
 #include "FS.h"
 #include "SD_MMC.h"
 
-class DHSD {
+class EasySDMMC {
 public:
-    DHSD();
+    EasySDMMC();
     bool begin();
     void listFiles(const char* folderName, uint8_t levels = 0);
     void createFolder(const char* folderName);
@@ -29,6 +29,6 @@ public:
     String logFilePath;
 };
 
-extern DHSD SDCARD;
+extern EasySDMMC SDCARD;
 
 #endif
